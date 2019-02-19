@@ -10,8 +10,8 @@ bool create_makefile(const std::string& name, const std::string& path) {
 	
 	std::ofstream makefile (path + "makefile");
 
-	makefile << "all: " <<  name << " clean"  << std::endl;
-	makefile << std::endl;
+	makefile<< "all: "<<name<< " clean"<<std::endl;
+	makefile<<std::endl;
 	makefile<<name<<": "<<name<<"Main.o "<<name<<".o"<<std::endl;
 	makefile<<'\t'<<"g++ -o "<<name<<" " <<name<<"Main.o "<<name
 		<<".o"<<std::endl;
