@@ -5,8 +5,6 @@
 
 //_________________________________________________________________________
 bool create_makefile(const std::string& name, const std::string& path) {
-
-	std::string pathWithName = path;
 	
 	std::ofstream makefile (path + "makefile");
 
