@@ -1,13 +1,13 @@
-all: test clean
+all: NeuronaleAnalyse clean
 
-test: testMain.o test.o
-	g++ -o test testMain.o test.o
+NeuronaleAnalyse: NeuronaleAnalyseMain.o NeuronaleAnalyse.o
+	g++ -o NeuronaleAnalyse NeuronaleAnalyseMain.o NeuronaleAnalyse.o
 
-testMain.o: testMain.cpp
-	g++ -c testMain.cpp
+NeuronaleAnalyseMain.o: NeuronaleAnalyseMain.cpp
+	g++ -c NeuronaleAnalyseMain.cpp
 
-test.o: test.cpp
-	g++ -c test.cpp
+NeuronaleAnalyse.o: NeuronaleAnalyse.cpp
+	g++ -c NeuronaleAnalyse.cpp
 
 clean:
 	rm -f *.o
